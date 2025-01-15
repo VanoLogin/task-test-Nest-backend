@@ -71,7 +71,7 @@ Response Example:
 #### Request Example:
 
 ```http
-POST http://localhost:3000/weather/:lat/:lon/:part
+GET http://localhost:3000/weather?lat=40.7128&lon=-74.006&part=hourly
 Content-Type: application/json
 
 Response Example:
