@@ -1,23 +1,23 @@
-#  Указываем базовый образ
+# Specify the base image
 FROM node:18-alpine
 
-# Устанавливаем рабочую директорию
+# Set the working directory
 WORKDIR /app
 
-#  Копируем файлы package.json и package-lock.json
+# Copy the package.json and package-lock.json files
 COPY package*.json ./
 
-#  Устанавливаем зависимости
+# Install dependencies
 RUN npm install
 
-#  Копируем весь код проекта
+# Copy the entire project code
 COPY . .
 
-#  Сборка приложения для продакшена
+# Build the application for production
 RUN npm run build
 
-#  Указываем порт
+# Specify the port
 EXPOSE 3030
 
-# Запускаем приложение
+# Run the application
 CMD ["npm", "run", "start:prod"]
