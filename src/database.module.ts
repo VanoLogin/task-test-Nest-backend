@@ -16,7 +16,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       },
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: process.env.DB_SYNC === 'true',
-      logging: false, //TODO: for dev mode make - off
+      logging: false,
     }),
   ],
 })

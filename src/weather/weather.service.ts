@@ -22,7 +22,6 @@ export class WeatherService {
         lon,
         part: weather,
       });
-      console.log(weatherEntity);
       return this.weatherRepository.save(weatherEntity);
     } catch (error) {
       throw new HttpException(

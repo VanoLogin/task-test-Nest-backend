@@ -9,7 +9,6 @@ export async function fetchWeatherData(params: WeatherQueryParams) {
     ? `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=${part}&appid=${apiKey}`
     : `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
   try {
-    console.log('we are there');
     const { data } = await axios.get(url);
     return data;
   } catch (error) {
